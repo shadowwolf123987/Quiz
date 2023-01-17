@@ -21,8 +21,19 @@ def question(question,answer):
 
 x=True
 while x == True:
+    choice = random.randint(1,4)
     p1 = random.randint(1,1000)
     p2 = random.randint(1,1000)
-    questionFuncInput = ("what is "+str(p1)+"*"+str(p2))
-    answerInput = str(p1*p2)
+    if choice == 1:
+        questionFuncInput = ("what is "+str(p1)+"*"+str(p2))
+        answerInput = str(p1*p2)
+    if choice == 2:
+        questionFuncInput = ("what is "+str(p1)+"/"+str(p2))
+        answerInput = str(p1/p2)
+    if choice == 3:
+        questionFuncInput = ("what is "+str(p1)+"+"+str(p2))
+        answerInput = str(p1+p2)
+    if choice == 4:
+        questionFuncInput = ("what is "+str(p1)+"-"+str(p2))
+        answerInput = str(p1-p2)
     question(questionFuncInput,answerInput)
